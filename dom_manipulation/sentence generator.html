@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random word generator</title>
+</head>
+<body>
+    <button>Click me to generate a word</button>
+    <p></p>
+
+    <script>
+    var adjective = ['lean', 'juicy', 'material', 'trashy', 'charming', 'obnoxious', 'flaky', 'hissing', 'tan', 'keen'];
+    var noun = ['son', 'analysis', 'direction', 'improvement','republic','month','music','guitar','contract','excitement'];
+    var verb = ['monitor', 'form', 'control', 'attend','collapse','accompany','bring','free','pull','assist'];
+    var adverb = ['clearly', 'sedately', 'patiently', 'rapidly','quietly','upward','far','powerfully','extremely','significantly'];
+    button = document.querySelector('button')
+    output = document.querySelector('p')
+    button.addEventListener('click', function () {
+        var chosen_adjective = adjective[Math.floor(Math.random()*adjective.length)];
+        var chosen_noun = noun[Math.floor(Math.random()*noun.length)];
+        var chosen_verb = verb[Math.floor(Math.random()*verb.length)];
+        var chosen_adverb = adverb[Math.floor(Math.random()*adverb.length)];
+        output.innerText = 'The ' + chosen_adjective + ' ' + chosen_noun + ' ' + chosen_verb + ' ' + chosen_adverb + '.';
+        })
+    
+    </script>
+</body>
+</html>
